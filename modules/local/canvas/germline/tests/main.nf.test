@@ -105,7 +105,7 @@ nextflow_process {
     // test("homo_sapiens - [ [bam,bai], fasta, xml, bed, sample vcf, [], ploidy vcf, known cnv bed ]") {
     //     setup {
     //         run("BCFTOOLS_REHEADER") {
-    //             script "../../../bcftools/reheader/main.nf"
+    //             script "../../../../nf-core/bcftools/reheader/main.nf"
     //             process {
     //                 """
     //                 input[0] = [
@@ -279,7 +279,7 @@ nextflow_process {
         options "-stub"
         setup {
             run("BCFTOOLS_REHEADER") {
-                script "../../../bcftools/reheader/main.nf"
+                script "../../../../nf-core/bcftools/reheader/main.nf"
                 process {
                     """
                     input[0] = [
