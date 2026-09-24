@@ -784,14 +784,14 @@ workflow RAREDISEASE {
                 ch_manta_regions,
                 ch_ploidy_model,
                 ch_readcount_intervals,
-                CALL_SV.out.vcf,
+                CALL_SNV.out.genome_vcf,
                 ch_target_bed,
                 skip_germlinecnvcaller,
                 val_analysis_type,
                 val_canvas_reformat_vcf,
                 val_cnv_caller
             )
-            ch_call_sv_nuclear_vcfs = CALL_SV.out.vcf
+            ch_call_sv_nuclear_vcfs = CALL_SV.out.vcfs
             ch_canvas_seg = CALL_SV.out.canvas_seg
         }
 
