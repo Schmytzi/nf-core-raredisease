@@ -10,7 +10,7 @@ keywords:
   - germline
   - structural-variation
   - bedtools
-components: 
+components:
   - bedtools/subtract
   - bedtools/complement
   - bcftools/reheader
@@ -42,7 +42,7 @@ input:
             type: path
             description: SNV VCF file
   - ch_kmer_fasta:
-      description: Canvas-ready reference FASTA. 
+      description: Canvas-ready reference FASTA.
       structure:
         - meta:
             type: map

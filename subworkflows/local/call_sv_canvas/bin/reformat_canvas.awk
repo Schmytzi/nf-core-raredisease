@@ -83,4 +83,3 @@ cn > 2 || (cn == 2 && chr ~ gonosome ) {
   $5 = new_alt
   print
 }
-

@@ -36,7 +36,7 @@ workflow CALL_SV_CANVAS {
 
     // ch_subtract_in will be empty if no target bed is provided, so the subtraction will be skipped implicitily
     BEDTOOLS_SUBTRACT(
-       ch_subtract_in 
+       ch_subtract_in
     )
 
     // Canvas expects a BED file of regions to exclude, so we take the complement of the BED file produced by the subtraction above.
@@ -66,7 +66,7 @@ workflow CALL_SV_CANVAS {
         ch_ploidy_vcf,
         [[], []]
     )
-       
+
     CANVAS_GERMLINE(
         ch_bam_bai,
         ch_kmer_fasta,

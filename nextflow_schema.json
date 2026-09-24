@@ -851,11 +851,11 @@
                     "default": 1000,
                     "fa_icon": "fas fa-align-center"
                 },
-                "canvas_reformat_vcf" : {
-                  "type": "boolean",
-                  "default": true,
-                  "description": "Specifies whether to reformat the Canvas VCF output to match the expected format for downstream analysis.",
-                  "fa_icon": "fas fa-toggle-on"
+                "canvas_reformat_vcf": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Specifies whether to reformat the Canvas VCF output to match the expected format for downstream analysis.",
+                    "fa_icon": "fas fa-toggle-on"
                 },
                 "sentieon_dnascope_pcr_indel_model": {
                     "type": "string",
