@@ -30,8 +30,8 @@ workflow CALL_SV_CANVAS {
     ch_subtract_in = ch_target_bed
         .filter { _meta, bed, _index -> bed } // If no target bed is provided, the bed value will be [] (falsey)
         .combine(ch_canvas_filter_bed)
-        .map { meta, target_bed, _target_index, _meta, canvas_filter_bed ->
-            tuple(meta, target_bed, canvas_filter_bed)
+        .map { target_meta, target_bed, _target_index, _filter_meta, canvas_filter_bed ->
+            tuple(target_meta, target_bed, canvas_filter_bed)
         }
 
     // ch_subtract_in will be empty if no target bed is provided, so the subtraction will be skipped implicitily
