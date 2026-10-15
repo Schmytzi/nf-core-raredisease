@@ -22,7 +22,10 @@ env:
   NFT_WORKDIR: "~"
   NXF_ANSI_LOG: false
   NXF_SINGULARITY_CACHEDIR: ${{ github.workspace }}/.singularity
-  NXF_SINGULARITY_LIBRARYDIR: ${{ github.workspace }}/.singularity
+  NXF_SINGULARITY_LIBRARYDIR:
+    ${{ github.workspace }}/.singularity
+    # Skip Sentieon-dependent tests when no license secret is available
+  NXF_TEST_SKIP_TAGS: ${{ secrets.SENTIEON_LICENSE_MESSAGE == '' && 'sentieon' || '' }}
 
 jobs:
   nf-test-changes:
